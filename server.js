@@ -50,8 +50,8 @@ app.use(express.static(__dirname + '/public'));
 
 
 // restaurant routes
-
-
+var restaurantRoutes = require('./app/routes/restaurant')(app, express);
+app.use('/restaurant', restaurantRoutes);
 
 
 //MAIN CATCHALL ROUTE
