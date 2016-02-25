@@ -1,5 +1,5 @@
 angular.module('apiOpgave', [
-	'ngAnimate',
 	'app.routes',
+	'ngAnimate',
 	'restaurantService',
 	'restaurantCtrl'])

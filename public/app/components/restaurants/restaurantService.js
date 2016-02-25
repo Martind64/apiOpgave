@@ -12,7 +12,7 @@ angular.module('restaurantService', [])
 	};
 
 	// get all users
-	restaurantFactory.get = function()
+	restaurantFactory.all = function()
 	{
 		return $http.get('/restaurant/restaurants/');
 	};
