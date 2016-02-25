@@ -1,13 +1,47 @@
-<table class="table table-bordered">
-	<thead>
-		<tr>
-			<th>name</th>
-			<th>information</th>
-		</tr>
-	</thead>
 
-	<tr ng-repeat="res in restaurant.restaurants">
-		<td>{{ res.name }}</td>
-		<td>{{ res.information }}</td>
-	</tr>
-</table>
+
+<style type="text/css">
+	.col-md-4{
+		border: 2px solid black;
+	}
+	
+</style>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>name</th>
+						<th>information</th>
+					</tr>
+				</thead>
+
+				<tr ng-repeat="res in restaurant.restaurants">
+					<td>{{ res.name }}</td>
+					<td>{{ res.information }}</td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-md-4">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Opening Hours</th>
+						<th>address</th>
+					</tr>
+				</thead>
+
+				<tr ng-repeat="res in restaurant.restaurants">
+					<td>{{ res.openingHours }}</td>
+					<td>{{ res.address }}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="col-md-4">
+			lots of info
+		</div>
+	</div>
+
+</div>

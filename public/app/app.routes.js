@@ -14,7 +14,7 @@ angular.module('app.routes', ['ngRoute'])
 		templateUrl : 'app/components/restaurants/restaurantView.html'
 	})
 
-	.when('/all',
+	.when('/restaurant/all',
 	{
 		templateUrl : 'app/components/restaurants/all.html',
 		controller  : 'restaurantController',
