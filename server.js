@@ -55,6 +55,12 @@ app.use('/restaurant', restaurantRoutes);
 
 
 //MAIN CATCHALL ROUTE
+// SEND USERS TO FRONTEND -----------------
+// has to be registered after API ROUTES
+app.get('*', function(req, res)
+{
+	res.sendFile(path.join(__dirname + '/public/index.html'));
+});
 
 
 
