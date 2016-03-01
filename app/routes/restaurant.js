@@ -65,12 +65,6 @@ apiRouter.route('/restaurants')
 			{
 				if(err) res.send(err);
 
-				// update the restaurant only if it's new
-				if(req.body.name) restaurant.name = req.body.name;
-				if(req.body.information) restaurant.information = req.body.information;
-				if(req.body.openingHours) restaurant.openingHours = req.body.openingHours;
-				if(req.body.address) restaurant.address = req.body.address;
-
 				// save the restaurant
 				restaurant.save(function(err)
 				{

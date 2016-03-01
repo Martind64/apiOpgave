@@ -4,9 +4,10 @@ angular.module('app.routes', ['ngRoute'])
 {
 	$routeProvider
 
+	// Route for the homepage
 	.when('/', 
 	{
-		templateUrl : 'app/components/restaurants/home.html'
+		templateUrl : 'app/shared/homepage.html'
 	})
 
 	.when('/hello',
@@ -14,10 +15,26 @@ angular.module('app.routes', ['ngRoute'])
 		templateUrl : 'app/components/restaurants/restaurantView.html'
 	})
 
-	.when('/restaurant/all',
+	.when('/restaurants',
 	{
 		templateUrl : 'app/components/restaurants/all.html',
 		controller  : 'restaurantController',
+		controllerAs: 'restaurant'
+	})
+
+	// Route to create a restaurant
+	.when('/restaurant/create',
+	{
+		templateUrl : 'app/components/restaurants/single.html',
+		controller  : 'restaurantCreateController',
+		controllerAs: 'restaurant'
+	})
+
+	// Route to update a restaurant
+	.when('/restaurant/:restaurant_id',
+	{
+		templateUrl : 'app/components/restaurants/single.html',
+		controller  : 'restaurantEditController',
 		controllerAs: 'restaurant'
 	});
 

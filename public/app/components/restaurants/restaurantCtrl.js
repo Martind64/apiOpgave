@@ -3,7 +3,7 @@ angular.module('restaurantCtrl', ['restaurantService'])
 .controller('restaurantController', function($location, Restaurant)
 {
 	var vm = this;
-
+	vm.typeHide = 'hide';
 	vm.processing = true;
 
 	Restaurant.all()
@@ -13,6 +13,11 @@ angular.module('restaurantCtrl', ['restaurantService'])
 
 			vm.restaurants = data;
 		});
+
+	vm.directToRestaurant = function()
+	{
+		$location.path('/restaurant/');
+	}
 
 	vm.deleteRestaurant = function(id)
 	{
@@ -61,10 +66,10 @@ angular.module('restaurantCtrl', ['restaurantService'])
 
 	vm.type = 'edit';
 
-	Restaurant.get($routeParams.user_id)
+	Restaurant.get($routeParams.restaurant_id)
 	.success(function(data)
 	{
-		vm.userData = data;
+		vm.restaurantData = data;
 	});
 
 	vm.saveRestaurant = function()
@@ -77,8 +82,10 @@ angular.module('restaurantCtrl', ['restaurantService'])
 		{
 			vm.processing = false;
 
-			vm.restaurantData = {};
+			// clear the form
+			vm.RestaurantData = {};
 
+			// bind the message from our API to vm.message
 			vm.message = data.message;
 		});
 	};
