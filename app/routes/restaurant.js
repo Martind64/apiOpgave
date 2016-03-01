@@ -61,19 +61,24 @@ apiRouter.route('/restaurants')
 		})
 		.put(function(req, res)
 		{
-			Restaurant.findById(req.params.restaurant_id, function(err, restaurant)
+		Restaurant.findById(req.params.restaurant_id, function(err, restaurant)
+		{
+			if(err) res.send(err);
+
+			if (req.body.name) restaurant.name = req.body.name;
+			if (req.body.information) restaurant.information = req.body.information;
+			if (req.body.openingHours) restaurant.openingHours = req.body.openingHours;
+			if (req.body.address) restaurant.address = req.body.address;
+
+			restaurant.save(function(err)
 			{
 				if(err) res.send(err);
 
-				// save the restaurant
-				restaurant.save(function(err)
-				{
-					if(err) res.send(err);
-
-					res.json({ message: 'Restaurant updated!'})
-				});
+				// return a message
+				res.json({ message: 'Restaurant updated'});
 			});
-		})
+		});
+	})
 		.delete(function(req, res)
 		{
 			Restaurant.remove(

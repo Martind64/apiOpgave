@@ -54,7 +54,7 @@ var restaurantRoutes = require('./app/routes/restaurant')(app, express);
 app.use('/restaurant', restaurantRoutes);
 
 
-//MAIN CATCHALL ROUTE
+//MAIN CATCHCALL ROUTE
 // SEND USERS TO FRONTEND -----------------
 // has to be registered after API ROUTES
 app.get('*', function(req, res)

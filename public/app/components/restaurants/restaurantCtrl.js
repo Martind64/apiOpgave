@@ -83,7 +83,7 @@ angular.module('restaurantCtrl', ['restaurantService'])
 			vm.processing = false;
 
 			// clear the form
-			vm.RestaurantData = {};
+			vm.restaurantData = {};
 
 			// bind the message from our API to vm.message
 			vm.message = data.message;
