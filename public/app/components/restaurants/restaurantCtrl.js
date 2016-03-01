@@ -60,7 +60,7 @@ angular.module('restaurantCtrl', ['restaurantService'])
 	};
 })
 
-.controller('restaurantEditController', function($routeParams, Restaurant)
+.controller('restaurantEditController', function($location, $routeParams, Restaurant)
 {
 	var vm = this;
 
@@ -87,6 +87,23 @@ angular.module('restaurantCtrl', ['restaurantService'])
 
 			// bind the message from our API to vm.message
 			vm.message = data.message;
+		});
+	};
+
+		vm.deleteRestaurant = function(id)
+	{
+		vm.processing = true;
+
+		Restaurant.delete(id)
+		.success(function(data)
+		{
+			Restaurant.all()
+			.success(function(data)
+			{
+				vm.processing = false;
+				vm.restaurants = data;
+			});
+			$location.path('/restaurants');
 		});
 	};
 });

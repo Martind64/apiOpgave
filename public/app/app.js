@@ -1,4 +1,4 @@
 angular.module('apiOpgave', [
-	'app.routes',
+	'app.routes.restaurant',
 	'restaurantService',
 	'restaurantCtrl'])
