@@ -7,27 +7,27 @@ angular.module('carService', [])
 
 		// get specific car
        carFactory.get = function(id) {
-         return $http.get('/api/cars/' + id);  
+         return $http.get('/cars/' + id);  
        };
        
-       // function - get all files
-       fileFactory.all = function() {
-           return $http.get('/api/cars');
+       // function - get all cars
+       carFactory.all = function() {
+           return $http.get('/cars');
        };
        
        // create a new car
        carFactory.create = function(carData) {
-           return $http.post('/api/cars', carData);
+           return $http.post('/cars', carData);
        };
        
        // edit a car
        carFactory.update = function(id, carData) {
-            return $http.put('/api/cars/' + id, carData);  
+            return $http.put('/cars/' + id, carData);  
        };
        
        // delete a car
        carFactory.delete = function(id) {
-            return $http.delete('/api/cars/' + id);    
+            return $http.delete('/cars/' + id);    
        };
        
        return carFactory;

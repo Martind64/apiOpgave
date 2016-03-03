@@ -17,15 +17,15 @@ angular.module('app.routes.car', ['ngRoute'])
 	{
 		templateUrl : 'app/components/cars/views/single.html',
 		controller  : 'carCreateController',
-		controllerAs: 'car'
+		controllerAs: 'Car'
 	})
 
 	// Route to update a cars
-	.when('/cars/:restaurant_id',
+	.when('/cars/:car_id',
 	{
 		templateUrl : 'app/components/cars/views/single.html',
 		controller  : 'carEditController',
-		controllerAs: 'car'
+		controllerAs: 'Car'
 	});
 
 	$locationProvider.html5Mode(true);

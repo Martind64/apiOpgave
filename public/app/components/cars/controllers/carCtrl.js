@@ -1,16 +1,16 @@
 angular.module('carCtrl', ['carService'])
 
-    .controller('carController', function(car) {
+    .controller('carController', function(Car) {
         var vm = this;
         
-        car.all()
+        Car.all()
             .success(function(data) {
                vm.cars = data; 
             });
             
         // delete a car
         vm.deleteCar = function(id) {
-            car.delete(id)
+            Car.delete(id)
                 .success(function(data) {
                    vm.cars = data; 
                 });
@@ -19,7 +19,7 @@ angular.module('carCtrl', ['carService'])
     
     
     
-    .controller('carCreationController', function(car) {
+    .controller('carCreateController', function(Car) {
         var vm = this;
         
         //show/hide elements of view between create and edit
@@ -30,7 +30,7 @@ angular.module('carCtrl', ['carService'])
           vm.message = '';
           
           // use the create function in the carService
-          car.create(vm.carData)
+          Car.create(vm.carData)
             .success(function(data) {
                
                // clear the form
@@ -40,7 +40,7 @@ angular.module('carCtrl', ['carService'])
         };
     })
     
-    .controller('carEditController', function($routeParams, car) {
+    .controller('carEditController', function($routeParams, Car) {
         var vm = this;
         
         //Variable to hide/show elements of the view
@@ -48,7 +48,7 @@ angular.module('carCtrl', ['carService'])
        
        // get the car data for the car
        // $routeParams to grab data from URL
-       car.get($routeParams.car_id)
+       Car.get($routeParams.car_id)
         .success(function(data) {
            vm.carData = data; 
         });
@@ -59,7 +59,7 @@ angular.module('carCtrl', ['carService'])
           vm.message = '';
           
           //call the carService function to update
-          car.update($routeParams.car_id, vm.carData)
+          Car.update($routeParams.car_id, vm.carData)
             .success(function(data) {
                
                
