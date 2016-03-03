@@ -12,12 +12,12 @@ angular.module('app.routes.restaurant', ['ngRoute'])
 
 	.when('/hello',
 	{
-		templateUrl : 'app/components/restaurants/restaurantView.html'
+		templateUrl : 'app/components/restaurants/views/restaurantView.html'
 	})
 
 	.when('/restaurants',
 	{
-		templateUrl : 'app/components/restaurants/all.html',
+		templateUrl : 'app/components/restaurants/views/all.html',
 		controller  : 'restaurantController',
 		controllerAs: 'restaurant'
 	})
@@ -25,7 +25,7 @@ angular.module('app.routes.restaurant', ['ngRoute'])
 	// Route to create a restaurant
 	.when('/restaurant/create',
 	{
-		templateUrl : 'app/components/restaurants/single.html',
+		templateUrl : 'app/components/restaurants/views/single.html',
 		controller  : 'restaurantCreateController',
 		controllerAs: 'restaurant'
 	})
@@ -33,7 +33,7 @@ angular.module('app.routes.restaurant', ['ngRoute'])
 	// Route to update a restaurant
 	.when('/restaurant/:restaurant_id',
 	{
-		templateUrl : 'app/components/restaurants/single.html',
+		templateUrl : 'app/components/restaurants/views/single.html',
 		controller  : 'restaurantEditController',
 		controllerAs: 'restaurant'
 	});
