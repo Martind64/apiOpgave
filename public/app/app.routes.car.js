@@ -1,6 +1,6 @@
 angular.module('app.routes.car', ['ngRoute'])
 
-.config(function($routeProvider $locationProvider) {
+.config(function($routeProvider, $locationProvider) {
 
 
 	$routeProvider
