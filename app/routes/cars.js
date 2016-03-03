@@ -1,5 +1,5 @@
 var Car = require('../models/Car');
-var config = require('../../config');
+
 
 
 
@@ -23,16 +23,7 @@ module.exports = function(app, express) {
     //crud routes
     
     router.route('/cars')
-    
-        //get all cars
-        .get(function(req, res) {
-            Car.find(function(err, cars) {
-               if(err) res.send(err);
-               
-               res.json(cars); 
-            });   
-        })
-    
+        
         // create a car entry
         .post(function(req, res) {
             
@@ -51,14 +42,26 @@ module.exports = function(app, express) {
                 if(err) {
                     //duplicate error code
                     if(err.code == 11000) {
-                        return res.json({ success: false, message: 'A car with that information already exists!'});
+                        res.json({ success: false, message: 'A car with that information already exists!'});
                     }   else {
-                        return res.send(err);
+                        res.send(err);
                     }
                 }
                 res.json({ message: 'Car entry created!' });
             });
+        })
+
+
+        //get all cars
+        .get(function(req, res) {
+            Car.find(function(err, cars) {
+               if(err) res.send(err);
+               
+               res.json(cars); 
+            });   
         });
+    
+        
         
         
         router.route('/cars/:car_id')
@@ -105,7 +108,7 @@ module.exports = function(app, express) {
        
     
   return router;  
-};
+}
 
 
 

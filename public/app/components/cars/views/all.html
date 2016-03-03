@@ -18,7 +18,7 @@
 -->
 
 
-<table class="table table-bordered table-striped" ng-show="Car.cars">
+<table class="table table-bordered table-striped" ng-show="car.cars">
     <thead>
         <tr>
             <th>_id</th>
@@ -29,7 +29,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="car in Car.cars">
+        <tr ng-repeat="car in car.cars">
             <td>{{ car._id }}</td>
             <td>{{ car.brand }}</td>
             <td>{{ car.model }}</td>

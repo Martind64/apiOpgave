@@ -30,7 +30,7 @@ mongoose.connect(config.database);
 app.use(function(req, res, next) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
-	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, Authorization');
+	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, \ Authorization');
 	next();
 });
 
@@ -45,7 +45,7 @@ app.use(express.static(__dirname + '/public'));
 
 // car routes
 var carsRoutes = require('./app/routes/cars')(app, express);
-app.use('/cars', carsRoutes);
+app.use('/car', carsRoutes);
 
 // news routes
 

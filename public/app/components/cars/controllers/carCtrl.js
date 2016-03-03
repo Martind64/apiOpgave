@@ -3,10 +3,16 @@ angular.module('carCtrl', ['carService'])
     .controller('carController', function(Car) {
         var vm = this;
         
+
+
+
         Car.all()
             .success(function(data) {
                vm.cars = data; 
             });
+
+
+        
             
         // delete a car
         vm.deleteCar = function(id) {

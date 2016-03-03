@@ -17,7 +17,7 @@ angular.module('app.routes.car', ['ngRoute'])
 	{
 		templateUrl : 'app/components/cars/views/single.html',
 		controller  : 'carCreateController',
-		controllerAs: 'Car'
+		controllerAs: 'car'
 	})
 
 	// Route to update a cars
