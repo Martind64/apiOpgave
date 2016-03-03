@@ -45,7 +45,7 @@ app.use(express.static(__dirname + '/public'));
 
 // car routes
 var carsRoutes = require('./app/routes/cars')(app, express);
-app.use('/car', carsRoutes);
+app.use('/cars', carsRoutes);
 
 // news routes
 

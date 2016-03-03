@@ -1,0 +1,44 @@
+<div class="page-header">
+    <h1>
+        Cars
+        <a href="/cars/create" class="btn btn-default">
+            <span class="glyphicon glyphicon-plus"></span>
+            New car
+        </a>
+    </h1>
+</div>
+
+
+<!-- LOADING MESSAGE -->
+<!--
+<div class="jumbotron text-center" ng-show="user.processing">
+	<span class="glyphicon glyphicon-repeat spinner"></span>
+	<p>Loading users.....</p>
+</div> 
+-->
+
+
+<table class="table table-bordered table-striped" ng-show="car.cars">
+    <thead>
+        <tr>
+            <th>_id</th>
+            <th>brand</th>
+            <th>model</th>
+            <th>km</th>
+            <th>price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="car in car.cars">
+            <td>{{ car._id }}</td>
+            <td>{{ car.brand }}</td>
+            <td>{{ car.model }}</td>
+            <td>{{ car.km }}</td>
+            <td>{{ car.price }}</td>
+            <td class="col-sm-2">
+                <a ng-href="/cars/{{ car._id }}" class="btn btn-danger">Edit</a>
+                <a href="#" ng-click="file.deleteCar(car._id)" class="btn btn-primary">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

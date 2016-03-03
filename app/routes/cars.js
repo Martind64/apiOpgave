@@ -22,7 +22,7 @@ module.exports = function(app, express) {
     
     //crud routes
     
-    router.route('/car')
+    router.route('/cars')
     
         //get all cars
         .get(function(req, res) {

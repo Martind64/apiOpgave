@@ -6,9 +6,9 @@ var Schema = mongoose.Schema;
 var CarSchema = new Schema({
    brand: String,
    model: String,
-   km: Int,
-   price: Double    
+   km: String,
+   price: String    
 });
 
 //RETURN THE MODEL
-module.exports = mongoose.model('Car', FileSchema);
+module.exports = mongoose.model('Car', CarSchema);

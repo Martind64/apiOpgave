@@ -1,4 +1,7 @@
 angular.module('apiOpgave', [
 	'app.routes.restaurant',
 	'restaurantService',
-	'restaurantCtrl'])
+	'restaurantCtrl',
+	'carService',
+	'carCtrl'
+	])
