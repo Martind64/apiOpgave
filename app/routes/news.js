@@ -70,7 +70,7 @@ module.exports = function(app, express)
 			{
 				if(err) res.send(err);
 
-				res.json({ message: 'News Updated'});
+				res.json({ message: 'News Updated!'});
 			});
 		});
 	})

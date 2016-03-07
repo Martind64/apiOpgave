@@ -71,7 +71,7 @@ apiRouter.route('/restaurants')
 				if(err) res.send(err);
 
 				// return a message
-				res.json({ message: 'Restaurant updated'});
+				res.json({ message: 'Restaurant updated!'});
 			});
 		});
 	})

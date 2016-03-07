@@ -47,3 +47,11 @@
 		<button type="submit" class="btn btn-success btn-lg btn-block" ng-if="restaurant.type == 'edit'">Update Restaurant</button>
 	</div>
 </form>
+
+	<div class="row show-hide-message" ng-show="restaurant.message">
+		<div class="col-sm-6 col-sm-offset-2">
+			<div class="alert alert-info">
+				{{ restaurant.message }}
+			</div>
+		</div>
+	</div>

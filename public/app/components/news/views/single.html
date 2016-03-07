@@ -40,3 +40,10 @@
 		<button type="submit" class="btn btn-success btn-lg btn-block" ng-if="news.type == 'edit'">Update News</button>
 	</div>
 </form>
+	<div class="row show-hide-message" ng-show="news.message">
+		<div class="col-sm-6 col-sm-offset-2">
+			<div class="alert alert-info">
+				{{ news.message }}
+			</div>
+		</div>
+	</div>
