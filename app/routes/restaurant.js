@@ -13,10 +13,6 @@ apiRouter.use(function(req, res, next)
 	next();
 });
 
-apiRouter.get('/', function(req, res)
-{
-	res.json({ message: 'Welcome to the restaurant API'});
-});
 
 // on routes that end in restaurants
 // ===================================================== 

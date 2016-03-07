@@ -1,0 +1,38 @@
+<style type="text/css">
+	.col-md-4{
+		border: 2px solid black;
+	}
+	
+</style>
+	<ul class="nav nav-pills">
+		<li><a href="/news/create">Create</a></li>
+	</ul>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Headline</th>
+						<th>Content</th>
+						<th>Author</th>
+						<th>link</th>
+					</tr>
+				</thead>
+
+				<tr ng-repeat="news in news.news" >
+					<td>{{ news.headline }}</td>
+					<td>{{ news.content}}</td>
+					<td>{{ news.author }}</td>
+					<td class="col-sm-2">
+						<a href="/news/{{ news._id }}">Edit</a>
+					</td>
+				</tr>
+
+			</table>
+
+	</div>
+
+</div>

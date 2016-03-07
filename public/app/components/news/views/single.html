@@ -1,0 +1,41 @@
+<style type="text/css">
+	#delBtn{
+		margin-top: 20px; 
+	}
+</style>
+
+
+<div class="page-header">
+	<button class="btn btn-danger btn-lg pull-right" id="delBtn" ng-click="news.deleteNews(news.newsData._id)">Delete</button>
+	<h1 ng-if="news.type =='create'">Create News</h1>
+	<h1 ng-if="news.type =='edit'">Edit News</h1>
+</div>
+
+<form class="form-horizontal" ng-submit="news.saveNews()">
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label">headline</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" ng-model="news.newsData.headline">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label">content</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" ng-model="news.newsData.content">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label">author</label>
+		<div class="col-sm-6">
+			<input type="text" class="form-control" ng-model="news.newsData.author">
+		</div>
+	</div>	
+
+	<div class="col-sm-offset-2 col-sm-6">
+		<button type="submit" class="btn btn-success btn-lg btn-block" ng-if="news.type == 'create'">Create News</button>
+		<button type="submit" class="btn btn-success btn-lg btn-block" ng-if="news.type == 'edit'">Update News</button>
+	</div>
+</form>

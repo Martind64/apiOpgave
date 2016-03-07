@@ -3,7 +3,6 @@ angular.module('restaurantCtrl', ['restaurantService'])
 .controller('restaurantController', function($location, Restaurant)
 {
 	var vm = this;
-	vm.typeHide = 'hide';
 	vm.processing = true;
 
 	Restaurant.all()

@@ -14,11 +14,7 @@ module.exports = function(app, express)
 		next();
 	});
 
-	// Show a when the news api is visited
-	apiRouter.get('/', function(req, res)
-	{
-		res.json({ message: 'Welcome to the News API'});
-	});
+
 
 	// on routes that end in news
 	// ============================================
