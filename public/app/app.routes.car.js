@@ -25,7 +25,7 @@ angular.module('app.routes.car', ['ngRoute'])
 	{
 		templateUrl : 'app/components/cars/views/single.html',
 		controller  : 'carEditController',
-		controllerAs: 'Car'
+		controllerAs: 'car'
 	});
 
 	$locationProvider.html5Mode(true);
