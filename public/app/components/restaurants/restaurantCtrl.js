@@ -4,6 +4,7 @@ angular.module('restaurantCtrl', ['restaurantService'])
 {
 	var vm = this;
 	vm.processing = true;
+	vm.category = 'restaurant';
 
 	Restaurant.all()
 		.success(function(data)
@@ -41,6 +42,7 @@ angular.module('restaurantCtrl', ['restaurantService'])
 	var vm = this;
 
 	vm.type = 'create';
+	vm.category = 'restaurant';
 
 	vm.saveRestaurant = function()
 	{
@@ -64,6 +66,7 @@ angular.module('restaurantCtrl', ['restaurantService'])
 	var vm = this;
 
 	vm.type = 'edit';
+	vm.category = 'restaurant';
 
 	Restaurant.get($routeParams.restaurant_id)
 	.success(function(data)

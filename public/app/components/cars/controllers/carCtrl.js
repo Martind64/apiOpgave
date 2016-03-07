@@ -3,6 +3,7 @@ angular.module('carCtrl', ['carService'])
     .controller('carController', function(Car) {
         var vm = this;
         
+       vm.category = 'cars';
 
 
 
@@ -27,6 +28,7 @@ angular.module('carCtrl', ['carService'])
     
     .controller('carCreateController', function(Car) {
         var vm = this;
+       vm.category = 'cars';
         
         //show/hide elements of view between create and edit
         vm.type = "create";
@@ -48,6 +50,7 @@ angular.module('carCtrl', ['carService'])
     
     .controller('carEditController', function($routeParams, Car) {
         var vm = this;
+       vm.category = 'cars';
         
         //Variable to hide/show elements of the view
        vm.type = 'edit';

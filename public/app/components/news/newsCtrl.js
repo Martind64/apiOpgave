@@ -4,6 +4,7 @@ angular.module('newsCtrl', ['newsService'])
 {
 	var vm = this;
 	vm.processing = true;
+     vm.category = 'news';
 
 	News.all()
 		.success(function(data)
@@ -39,6 +40,7 @@ angular.module('newsCtrl', ['newsService'])
 .controller('newsCreateController', function(News)
 {
 	var vm = this;
+    vm.category = 'news';
 
 	vm.type = 'create';
 
@@ -62,6 +64,7 @@ angular.module('newsCtrl', ['newsService'])
 .controller('newsEditController', function($location, $routeParams, News)
 {
 	var vm = this;
+    vm.category = 'news';
 
 	vm.type = 'edit';
 

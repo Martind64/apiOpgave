@@ -11,13 +11,13 @@
 	<nav class="navbar navbar-default" id="navbar">
 		<div class="container">
 			<div class="navbar-header">
-				<a href="/" class="navbar-brand" >Api's</a>
+				<a href="/" class="navbar-brand" >Api</a>
 			</div>
 
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/restaurants">Restaurants</a></li>
-				<li><a href="/cars">Cars</a></li>
-				<li><a href="/news">News</a></li>
+				<li ng-if="restaurant.category == 'restaurant'"><a href="/restaurants">Restaurants</a></li>
+				<li ng-if="car.category == 'cars'"><a href="/cars">Cars</a></li>
+				<li ng-if="news.category == 'news'"><a href="/news">News</a></li>
 			</ul>
 		</div>	
 	</nav>
