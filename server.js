@@ -1,7 +1,3 @@
-//MODELS
-
-
-
 //CONFIG
 var config = require('./config');
 
@@ -48,7 +44,8 @@ var carsRoutes = require('./app/routes/cars')(app, express);
 app.use('/car', carsRoutes);
 
 // news routes
-
+var newsRoutes = require('./app/routes/news')(app, express);
+app.use('/news', newsRoutes);
 
 // restaurant routes
 var restaurantRoutes = require('./app/routes/restaurant')(app, express);

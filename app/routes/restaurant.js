@@ -6,7 +6,7 @@ module.exports = function(app, express)
 var apiRouter = express.Router();
 
 
-// Middelware to log restaurant api calls
+// Middleware to log restaurant api calls
 apiRouter.use(function(req, res, next)
 {
 	console.log('Someone visited the restaurant API');
@@ -61,14 +61,14 @@ apiRouter.route('/restaurants')
 		})
 		.put(function(req, res)
 		{
-		Restaurant.findById(req.params.restaurant_id, function(err, restaurant)
-		{
-			if(err) res.send(err);
+			Restaurant.findById(req.params.restaurant_id, function(err, restaurant)
+			{
+				if(err) res.send(err);
 
-			if (req.body.name) restaurant.name = req.body.name;
-			if (req.body.information) restaurant.information = req.body.information;
-			if (req.body.openingHours) restaurant.openingHours = req.body.openingHours;
-			if (req.body.address) restaurant.address = req.body.address;
+				if (req.body.name) restaurant.name = req.body.name;
+				if (req.body.information) restaurant.information = req.body.information;
+				if (req.body.openingHours) restaurant.openingHours = req.body.openingHours;
+				if (req.body.address) restaurant.address = req.body.address;
 
 			restaurant.save(function(err)
 			{

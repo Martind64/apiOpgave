@@ -11,19 +11,19 @@ angular.module('restaurantService', [])
 		return $http.get('/restaurant/restaurants/' + id);
 	};
 
-	// get all users
+	// get all restaurants
 	restaurantFactory.all = function()
 	{
 		return $http.get('/restaurant/restaurants/');
 	};
 
-	// create a user
+	// create a restaurants
 	restaurantFactory.create = function(restaurantData)
 	{
 		return $http.post('/restaurant/restaurants/', restaurantData);
 	};
 
-	// update a user
+	// update a restaurants
 	restaurantFactory.update = function(id, restaurantData)
 	{
 		return $http.put('/restaurant/restaurants/' + id, restaurantData);
