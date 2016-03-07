@@ -4,7 +4,8 @@
 	}
 </style>
 
-
+<!-- Include the navbar -->
+<div ng-include src="'app/shared/navbar.html'"></div>
 <div class="page-header">
 	<button ng-if="news.type == 'edit'"class="btn btn-danger btn-lg pull-right" id="delBtn" ng-click="news.deleteNews(news.newsData._id)">Delete</button>
 	<h1 ng-if="news.type =='create'">Create News</h1>
