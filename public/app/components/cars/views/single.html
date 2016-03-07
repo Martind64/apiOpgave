@@ -1,4 +1,11 @@
+<style type="text/css">
+	#delBtn{
+		margin-top: 20px; 
+	}
+</style>
+
 <div class="page-header">
+	<button class="btn btn-danger btn-lg pull-right" id="delBtn" ng-click="car.deleteCar(car.carData._id)">Delete</button>
 	<h1 ng-if="car.type == 'create'">Create car</h1>
 	<h1 ng-if="car.type == 'edit'">Edit car</h1>
 </div>
