@@ -6,7 +6,7 @@
 
 
 <div class="page-header">
-	<button class="btn btn-danger btn-lg pull-right" id="delBtn" ng-click="restaurant.deleteRestaurant(restaurant.restaurantData._id)">Delete</button>
+	<button ng-if="restaurant.type == 'edit'"class="btn btn-danger btn-lg pull-right" id="delBtn" ng-click="restaurant.deleteRestaurant(restaurant.restaurantData._id)">Delete</button>
 	<h1 ng-if="restaurant.type =='create'">Create Restaurant</h1>
 	<h1 ng-if="restaurant.type =='edit'">Edit Restaurant</h1>
 </div>

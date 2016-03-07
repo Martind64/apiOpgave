@@ -15,7 +15,7 @@ angular.module('app.routes.news', ['ngRoute'])
 	.when('/news/create',
 	{
 		templateUrl : 'app/components/news/views/single.html',
-		controller 	: 'newsController',
+		controller 	: 'newsCreateController',
 		controllerAs: 'news'
 	})
 
