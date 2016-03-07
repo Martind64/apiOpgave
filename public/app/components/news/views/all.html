@@ -5,6 +5,9 @@
 
 </style>
 
+<!-- Include the navbar -->
+<div ng-include src="'app/shared/navbar.html'"></div>
+
 <div class="page-header">
 	<h1>News
 		 <a href="/restaurant/create"><button class="btn btn-default pull-right" id="Btn"><span class="glyphicon glyphicon-plus"></span> New News</button></a>
@@ -30,7 +33,7 @@
 					<td>{{ news.content}}</td>
 					<td>{{ news.author }}</td>
 					<td class="col-sm-2">
-						<a href="/news/{{ news._id }}">Edit</a>
+						<a href="/news/{{ news._id }}" class="btn btn-info">Edit</a>
 					</td>
 				</tr>
 
