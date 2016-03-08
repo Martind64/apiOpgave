@@ -48,7 +48,7 @@ angular.module('carCtrl', ['carService'])
         };
     })
     
-    .controller('carEditController', function($routeParams, Car) {
+    .controller('carEditController', function($location, $routeParams, Car) {
         var vm = this;
        vm.category = 'cars';
         
@@ -79,4 +79,14 @@ angular.module('carCtrl', ['carService'])
                vm.message = data.message; 
             });
         };
+
+        // delete a car
+        vm.deleteCar = function(id) {
+            Car.delete(id)
+                .success(function(data) {
+                   vm.cars = data; 
+                });
+                $location.path('/cars');
+        };
+
     })

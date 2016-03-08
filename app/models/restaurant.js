@@ -10,5 +10,6 @@ var RestaurantSchema = new Schema({
 	address: String,
 });
 
+// return the model
 module.exports = mongoose.model('Restaurant', RestaurantSchema);
 
